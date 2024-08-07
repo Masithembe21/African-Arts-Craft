@@ -29,13 +29,19 @@ public class CategoriesController {
         this.categoriesService = categoriesService;
     }
 
-    @PostMapping
+    /**
+     * Endpoint: http://localhost:8080/store/categories/create
+     */
+    @PostMapping("/create")
     public ResponseEntity<Categories> createCategory(@RequestBody Categories category) {
         Categories createdCategory = categoriesService.create(category);
         return new ResponseEntity<>(createdCategory, HttpStatus.CREATED);
     }
 
-    @GetMapping("/{id}")
+    /**
+     * Endpoint: http://localhost:8080/store/categories/get/{id}
+     */
+    @GetMapping("/get/{id}")
     public ResponseEntity<Categories> getCategoryById(@PathVariable Long id) {
         Categories category = categoriesService.read(id);
         if (category != null) {
@@ -45,6 +51,9 @@ public class CategoriesController {
         }
     }
 
+    /**
+     * Endpoint: http://localhost:8080/store/categories/update
+     */
     @PutMapping("/update")
     public ResponseEntity<Categories> updateCategory(@RequestBody Categories category) {
         Categories updatedCategory = categoriesService.update(category);
@@ -55,6 +64,9 @@ public class CategoriesController {
         }
     }
 
+    /**
+     * Endpoint: http://localhost:8080/store/categories/getAll
+     */
     @GetMapping("/getAll")
     public ResponseEntity<List<Categories>> getAllCategories() {
         List<Categories> categoriesList = categoriesService.findAll();

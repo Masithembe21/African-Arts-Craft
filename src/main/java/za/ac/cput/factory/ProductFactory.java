@@ -3,7 +3,7 @@ package za.ac.cput.factory;
 import za.ac.cput.domain.Products;
 import za.ac.cput.util.Helper;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * ProductFactory.java
@@ -17,7 +17,7 @@ public class ProductFactory {
 
     public static Products buildProduct(long productId, String name, String description,
                                         double price, int stockQuantity, long categoryId,
-                                        LocalDate createdAt, LocalDate updatedAt, String imagePath) {
+                                        LocalDateTime createdAt, LocalDateTime updatedAt, String imagePath) {
         if (Helper.isNullOrEmpty(name) ||
                 Helper.isNullOrEmpty(description) ||
                 Helper.isDoubleNullOrEmpty(price) ||

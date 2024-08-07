@@ -5,7 +5,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * Products.java
@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @Entity
 public class Products implements Serializable {
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long productId;
     private String name;
     private String description;
@@ -26,9 +26,9 @@ public class Products implements Serializable {
     private int stockQuantity;
     private long categoryId;
     @CreationTimestamp
-    private LocalDate createdAt;
+    private LocalDateTime createdAt;
     @UpdateTimestamp
-    private LocalDate updatedAt;
+    private LocalDateTime updatedAt;
     private String imagePath;
 
     public Products() {
@@ -70,11 +70,11 @@ public class Products implements Serializable {
         return categoryId;
     }
 
-    public LocalDate getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public LocalDate getUpdatedAt() {
+    public LocalDateTime getUpdatedAt() {
         return updatedAt;
     }
 
@@ -140,8 +140,8 @@ public class Products implements Serializable {
         private double price;
         private int stockQuantity;
         private long categoryId;
-        private LocalDate createdAt;
-        private LocalDate updatedAt;
+        private LocalDateTime createdAt;
+        private LocalDateTime updatedAt;
         private String imagePath;
 
         public Builder setProductId(long productId) {
@@ -174,12 +174,12 @@ public class Products implements Serializable {
             return this;
         }
 
-        public Builder setCreatedAt(LocalDate createdAt) {
+        public Builder setCreatedAt(LocalDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setUpdatedAt(LocalDate updatedAt) {
+        public Builder setUpdatedAt(LocalDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }

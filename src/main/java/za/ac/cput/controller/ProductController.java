@@ -21,7 +21,6 @@ import java.util.List;
  * @date 26-Jul-24
  */
 
-
 @RestController
 @RequestMapping("/product")
 @CrossOrigin(origins = "*")
@@ -34,17 +33,26 @@ public class ProductController {
         this.productService = productService;
     }
 
-    // Create a new product
-    //add proper name conventions for all methods
+    /**
+     * Endpoint: http://localhost:8080/store/product/create
+     */
     @PostMapping("/create")
     public ResponseEntity<Products> createProduct(@RequestBody Products product) {
-        System.out.println("This is line 40: " + product);
-        Products createdProduct = productService.create(product);
-        return new ResponseEntity<>(createdProduct, HttpStatus.CREATED);
+        System.out.println("Received product: " + product);
+        try {
+            Products createdProduct = productService.create(product);
+            return new ResponseEntity<>(createdProduct, HttpStatus.CREATED);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
-    // Read a product by ID
-    @GetMapping("/getbyid/{id}")
+
+    /**
+     * Endpoint: http://localhost:8080/store/product/getid/{id}
+     */
+    @GetMapping("/getid/{id}")
     public ResponseEntity<Products> getProductById(@PathVariable Long id) {
         Products product = productService.read(id);
         if (product != null) {
@@ -54,8 +62,10 @@ public class ProductController {
         }
     }
 
-    // Update an existing product
-    @PutMapping("/{id}")
+    /**
+     * Endpoint: http://localhost:8080/store/product/update/{id}
+     */
+    @PutMapping("/update/{id}")
     public ResponseEntity<Products> updateProduct(@PathVariable Long id, @RequestBody Products product) {
         Products existingProduct = productService.read(id);
         if (existingProduct != null) {
@@ -79,8 +89,10 @@ public class ProductController {
         }
     }
 
-    // Delete a product by ID
-    @DeleteMapping("/{id}")
+    /**
+     * Endpoint: http://localhost:8080/store/product/delete/{id}
+     */
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         Products existingProduct = productService.read(id);
         if (existingProduct != null) {
@@ -91,50 +103,63 @@ public class ProductController {
         }
     }
 
-    // Get all products
-    @GetMapping
+    /**
+     * Endpoint: http://localhost:8080/store/product/getAll
+     */
+    @GetMapping("/getAll")
     public ResponseEntity<List<Products>> getAllProducts() {
         List<Products> products = productService.findAll();
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-    // Find products by name
+    /**
+     * Endpoint: http://localhost:8080/store/product/name/{name}
+     */
     @GetMapping("/name/{name}")
     public ResponseEntity<List<Products>> getProductsByName(@PathVariable String name) {
         List<Products> products = productService.findByName(name);
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-    // Find products by category ID
+    /**
+     * Endpoint: http://localhost:8080/store/product/category/{categoryId}
+     */
     @GetMapping("/category/{categoryId}")
     public ResponseEntity<List<Products>> getProductsByCategoryId(@PathVariable long categoryId) {
         List<Products> products = productService.findByCategoryId(categoryId);
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-    // Find products by price range
-    //works but it's a bit tricky make sure to create two input when developing front end
+    /**
+     * Endpoint: http://localhost:8080/store/product/price
+     */
     @GetMapping("/price")
     public ResponseEntity<List<Products>> getProductsByPriceRange(@RequestParam double minPrice, @RequestParam double maxPrice) {
         List<Products> products = productService.findByPriceBetween(minPrice, maxPrice);
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-    // Find products by stock quantity greater than
+    /**
+     * Endpoint: http://localhost:8080/store/product/stock
+     */
     @GetMapping("/stock")
     public ResponseEntity<List<Products>> getProductsByStockQuantityGreaterThan(@RequestParam int stockQuantity) {
         List<Products> products = productService.findByStockQuantityGreaterThan(stockQuantity);
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-    // Find products created after a certain date
+    /**
+     * Endpoint: http://localhost:8080/store/product/created-after
+     */
     @GetMapping("/created-after")
     public ResponseEntity<List<Products>> getProductsCreatedAfter(@RequestParam LocalDate createdAt) {
         List<Products> products = productService.findByCreatedAtAfter(createdAt);
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-    // Find products updated before a certain date
+    /**
+     * Endpoint: http://localhost:8080/store/product/updated-before
+     */
     @GetMapping("/updated-before")
     public ResponseEntity<List<Products>> getProductsUpdatedBefore(@RequestParam LocalDate updatedAt) {
         List<Products> products = productService.findByUpdatedAtBefore(updatedAt);
