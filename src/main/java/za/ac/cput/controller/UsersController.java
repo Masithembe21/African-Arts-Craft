@@ -129,12 +129,10 @@ public class UsersController {
     }
 
     @PostMapping("/validate")
-    public ResponseEntity<String> validateUser(@RequestBody User user) {
-        String email = user.getEmail();
-        String password = user.getPassword();
-        boolean isValid = userService.validateUser(email, password);
-        if (isValid) {
-            return ResponseEntity.ok("User is valid");
+    public ResponseEntity<?> validateUser(@RequestBody User user) {
+        User validUser = userService.validateUser(user.getEmail(), user.getPassword());
+        if (validUser != null) {
+            return ResponseEntity.ok(validUser);
         } else {
             return ResponseEntity.status(401).body("Invalid email or password");
         }

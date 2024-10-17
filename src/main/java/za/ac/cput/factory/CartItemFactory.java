@@ -27,43 +27,15 @@ public class CartItemFactory {
                                           Cart cart,
                                           Product product,
                                           int quantity) {
-        // Define constants for the error flags
-        final int CART_NULL = 1;
-        final int PRODUCT_NULL = 2;
-        final int QUANTITY_INVALID = 4;
-
-        // Calculate the errorFlags based on null checks and invalid quantity
-        int errorFlags = 0;
-
+        // Validate inputs
         if (cart == null) {
-            errorFlags |= CART_NULL;
+            throw new IllegalArgumentException("Cart cannot be null");
         }
         if (product == null) {
-            errorFlags |= PRODUCT_NULL;
+            throw new IllegalArgumentException("Product cannot be null");
         }
         if (quantity <= 0) {
-            errorFlags |= QUANTITY_INVALID;
-        }
-
-        // Use switch statement to throw exception based on the flags
-        switch (errorFlags) {
-            case CART_NULL | PRODUCT_NULL | QUANTITY_INVALID:
-                throw new IllegalArgumentException("Cart, Product cannot be null and Quantity must be greater than zero");
-            case CART_NULL | PRODUCT_NULL:
-                throw new IllegalArgumentException("Cart and Product cannot be null");
-            case CART_NULL | QUANTITY_INVALID:
-                throw new IllegalArgumentException("Cart cannot be null and Quantity must be greater than zero");
-            case PRODUCT_NULL | QUANTITY_INVALID:
-                throw new IllegalArgumentException("Product cannot be null and Quantity must be greater than zero");
-            case CART_NULL:
-                throw new IllegalArgumentException("Cart cannot be null");
-            case PRODUCT_NULL:
-                throw new IllegalArgumentException("Product cannot be null");
-            case QUANTITY_INVALID:
-                throw new IllegalArgumentException("Quantity must be greater than zero");
-            default:
-                // No null values or invalid quantity
-                break;
+            throw new IllegalArgumentException("Quantity must be greater than zero");
         }
 
         // Use the Builder pattern to create a new CartItem object

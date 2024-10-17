@@ -22,11 +22,8 @@ import java.util.*;
 @Getter
 @Entity
 @Table(name = "users")
-public class User implements Serializable {
+public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     @Column(name = "avatar")
     private String avatar;
@@ -43,6 +40,7 @@ public class User implements Serializable {
     @Column(nullable = false)
     private String password;
 
+    @Id
     @Column(nullable = false, unique = true)
     private String email;
 
@@ -59,9 +57,10 @@ public class User implements Serializable {
     @Column(name = "updated_at")
     private LocalDate updatedAt;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, orphanRemoval = true)
-    @JsonManagedReference("userAddressReference")
-    private List<Address> address = new ArrayList<>();
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
+    private Address address;
+
 
     @OneToMany
     @JoinColumn(name = "user_id")
@@ -73,7 +72,7 @@ public class User implements Serializable {
     }
 
     public User(Builder builder) {
-        this.id = builder.id;
+
         this.avatar = builder.avatar;
         this.username = builder.username;
         this.password = builder.password;
@@ -82,7 +81,7 @@ public class User implements Serializable {
         this.lastName = builder.lastName;
         this.createdAt = builder.createdAt;
         this.updatedAt = builder.updatedAt;
-        this.address = builder.address != null ? builder.address : new ArrayList<>();
+        this.address = builder.address;
         this.review = builder.review != null ? builder.review : new ArrayList<>();
         this.roles.addAll(builder.roles);
     }
@@ -92,8 +91,7 @@ public class User implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) &&
-                Objects.equals(avatar, user.avatar) &&
+        return Objects.equals(avatar, user.avatar) &&
                 Objects.equals(username, user.username) &&
                 Objects.equals(password, user.password) &&
                 Objects.equals(email, user.email) &&
@@ -108,13 +106,12 @@ public class User implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, avatar, username, password, email, firstName, lastName, createdAt, updatedAt, address, review, roles);
+        return Objects.hash(avatar, username, password, email, firstName, lastName, createdAt, updatedAt, address, review, roles);
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "User ID: " + id +
                 ", AVATAR: '" + avatar + '\'' +
                 ", USERNAME: '" + username + '\'' +
                 ", PASSWORD: '" + password + '\'' +
@@ -130,7 +127,7 @@ public class User implements Serializable {
     }
 
     public static class Builder {
-        private Long id;
+
         private String avatar; // Added avatar field
         private String username;
         private String password;
@@ -140,13 +137,9 @@ public class User implements Serializable {
         private LocalDate createdAt;
         private LocalDate updatedAt;
         private Set<String> roles = new HashSet<>();
-        private List<Address> address;
+        private Address address;
         private List<Review> review;
 
-        public Builder setId(Long id) {
-            this.id = id;
-            return this;
-        }
 
         public Builder setAvatar(String avatar) { // Added setAvatar method
             this.avatar = avatar;
@@ -193,7 +186,7 @@ public class User implements Serializable {
             return this;
         }
 
-        public Builder setAddress(List<Address> address) {
+        public Builder setAddress(Address address) {
             this.address = address;
             return this;
         }
@@ -204,7 +197,7 @@ public class User implements Serializable {
         }
 
         public Builder copy(User user) {
-            this.id = user.getId();
+
             this.avatar = user.getAvatar(); // Added avatar copy
             this.username = user.getUsername();
             this.password = user.getPassword();

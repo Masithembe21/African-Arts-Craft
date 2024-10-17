@@ -38,7 +38,7 @@ public class CartController {
      * @param cart the cart to be created
      * @return ResponseEntity containing the created Cart and HTTP status code
      */
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Cart> createCart(@RequestBody Cart cart) {
         Cart createdCart = cartService.create(cart);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdCart);
@@ -98,55 +98,5 @@ public class CartController {
     public ResponseEntity<List<Cart>> getAllCarts() {
         List<Cart> cartList = cartService.findAll();
         return ResponseEntity.ok(cartList);
-    }
-
-    /**
-     * Retrieves all carts associated with a specific user ID.
-     *
-     * @param userId the user ID to search by
-     * @return ResponseEntity containing the list of Carts associated with the given user ID
-     */
-    @GetMapping("/byUser/{userId}")
-    public ResponseEntity<List<Cart>> getCartsByUserId(@PathVariable Long userId) {
-        List<Cart> carts = cartService.findByUserId(userId);
-        return ResponseEntity.ok(carts);
-    }
-
-    /**
-     * Retrieves all carts created after a specific date.
-     *
-     * @param date the date to search by
-     * @return ResponseEntity containing the list of Carts created after the given date
-     */
-    @GetMapping("/created-after/{date}")
-    public ResponseEntity<List<Cart>> getCartsCreatedAfter(@PathVariable String date) {
-        LocalDateTime createdAt = LocalDateTime.parse(date);
-        List<Cart> carts = cartService.findByCreatedAtAfter(createdAt);
-        return ResponseEntity.ok(carts);
-    }
-
-    /**
-     * Retrieves all carts with a total greater than a specified amount.
-     *
-     * @param total the minimum total value to search by
-     * @return ResponseEntity containing the list of Carts with a total greater than the specified amount
-     */
-    @GetMapping("/total-greater-than/{total}")
-    public ResponseEntity<List<Cart>> getCartsByTotalGreaterThan(@PathVariable Double total) {
-        List<Cart> carts = cartService.findByTotalGreaterThan(total);
-        return ResponseEntity.ok(carts);
-    }
-
-    /**
-     * Retrieves all carts updated after a specific date.
-     *
-     * @param date the date to search by
-     * @return ResponseEntity containing the list of Carts updated after the given date
-     */
-    @GetMapping("/updated-after/{date}")
-    public ResponseEntity<List<Cart>> getCartsUpdatedAfter(@PathVariable String date) {
-        LocalDateTime updatedAt = LocalDateTime.parse(date);
-        List<Cart> carts = cartService.findByUpdatedAtAfter(updatedAt);
-        return ResponseEntity.ok(carts);
     }
 }

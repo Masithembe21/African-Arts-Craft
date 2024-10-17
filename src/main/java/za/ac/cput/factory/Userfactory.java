@@ -2,6 +2,7 @@ package za.ac.cput.factory;
 
 import za.ac.cput.domain.User;
 import za.ac.cput.util.Helper;
+import za.ac.cput.domain.*;
 
 import java.time.LocalDate;
 
@@ -16,6 +17,7 @@ import java.time.LocalDate;
 public class Userfactory {
 
     public static User buildUser(Long id,
+                                 Address address,
                                  String username,
                                  String password,
                                  String email,
@@ -36,7 +38,7 @@ public class Userfactory {
         ) return null;
 
         return new User.Builder()
-                .setId(id)
+                .setAddress(address)
                 .setUsername(username)
                 .setPassword(password)
                 .setEmail(email)

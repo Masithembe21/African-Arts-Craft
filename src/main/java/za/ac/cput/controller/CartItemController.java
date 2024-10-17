@@ -36,7 +36,7 @@ public class CartItemController {
      * @param cartItem the CartItem object to be created
      * @return ResponseEntity containing the created CartItem and HTTP status code 201 Created
      */
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<CartItem> createCartItem(@RequestBody CartItem cartItem) {
         CartItem createdCartItem = cartItemService.create(cartItem);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdCartItem);

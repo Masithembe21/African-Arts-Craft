@@ -30,14 +30,19 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     private Double total;
+
+    private Integer itemCount; // New field for total item count
+
+    private String status; // New field for cart status (e.g., active, abandoned, checked out)
+
     @CreationTimestamp
     private LocalDateTime createdAt;
+
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
@@ -45,14 +50,17 @@ public class Cart {
     @JsonManagedReference("cartReference")
     private List<CartItem> cartItems;
 
-
     public Cart() {
+        this.itemCount = 0; // Initialize item count
+        this.status = "active"; // Default status
     }
 
     private Cart(Builder builder) {
         this.id = builder.id;
         this.user = builder.user;
         this.total = builder.total;
+        this.itemCount = builder.itemCount;
+        this.status = builder.status;
     }
 
     @Override
@@ -61,6 +69,8 @@ public class Cart {
                 "id=" + id +
                 ", user=" + user.getFirstName() +
                 ", total=" + total +
+                ", itemCount=" + itemCount + // Include item count in toString
+                ", status='" + status + '\'' + // Include status in toString
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 "}\n";
@@ -74,19 +84,23 @@ public class Cart {
         return Objects.equals(id, cart.id) &&
                 Objects.equals(user, cart.user) &&
                 Objects.equals(total, cart.total) &&
+                Objects.equals(itemCount, cart.itemCount) && // Compare item count
+                Objects.equals(status, cart.status) && // Compare status
                 Objects.equals(createdAt, cart.createdAt) &&
                 Objects.equals(updatedAt, cart.updatedAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, user, total, createdAt, updatedAt);
+        return Objects.hash(id, user, total, itemCount, status, createdAt, updatedAt); // Include new fields
     }
 
     public static class Builder {
         private Long id;
         private User user;
         private Double total;
+        private Integer itemCount; // New field for total item count
+        private String status; // New field for cart status
 
         public Builder setId(Long id) {
             this.id = id;
@@ -103,10 +117,22 @@ public class Cart {
             return this;
         }
 
+        public Builder setItemCount(Integer itemCount) {
+            this.itemCount = itemCount;
+            return this;
+        }
+
+        public Builder setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+
         public Builder copy(Cart cart) {
             this.id = cart.getId();
             this.user = cart.getUser();
             this.total = cart.getTotal();
+            this.itemCount = cart.getItemCount(); // Copy item count
+            this.status = cart.getStatus(); // Copy status
             return this;
         }
 

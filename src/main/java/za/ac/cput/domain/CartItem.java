@@ -8,7 +8,7 @@ import java.util.Objects;
 
 /**
  * Represents a cart item entry in the system.
- * Each entry is associated with a Cart, a Product, and a ProductSkuService.
+ * Each entry is associated with a Cart and a Product.
  * <p>
  * This entity class is mapped to the "cart_item" table in the database.
  * Includes the necessary mappings for relationships to other entities.
@@ -30,11 +30,9 @@ public class CartItem {
     @JsonBackReference("cartReference")
     private Cart cart;
 
-
     @ManyToOne
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
-
 
     @Column(nullable = false)
     private int quantity;
@@ -53,8 +51,8 @@ public class CartItem {
     public String toString() {
         return "\n CartItem{" +
                 "id=" + id +
-                ", cart=" + cart +
-                ", product=" + product.getName() + '\'' +
+                ", cart=" + cart.getId() +
+                ", product=" + product.getName() +
                 ", quantity=" + quantity +
                 "}\n";
     }
@@ -95,7 +93,6 @@ public class CartItem {
             this.product = product;
             return this;
         }
-
 
         public Builder setQuantity(int quantity) {
             this.quantity = quantity;

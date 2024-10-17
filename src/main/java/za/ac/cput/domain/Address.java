@@ -25,11 +25,6 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id", nullable = false)
-    @JsonBackReference("userAddressReference")
-    private User user;
-
     private String title;
     private String addressLine1;
     private String addressLine2;
@@ -48,7 +43,6 @@ public class Address {
 
     private Address(Builder builder) {
         this.id = builder.id;
-        this.user = builder.user;
         this.title = builder.title;
         this.addressLine1 = builder.addressLine1;
         this.addressLine2 = builder.addressLine2;
@@ -72,7 +66,6 @@ public class Address {
     public String toString() {
         return "\n Address{" +
                 "id=" + id +
-                ", user=" + user.getFirstName() +
                 ", title='" + title + '\'' +
                 ", addressLine1='" + addressLine1 + '\'' +
                 ", addressLine2='" + addressLine2 + '\'' +
@@ -91,7 +84,6 @@ public class Address {
         if (o == null || getClass() != o.getClass()) return false;
         Address address = (Address) o;
         return Objects.equals(id, address.id) &&
-                Objects.equals(user, address.user) &&
                 Objects.equals(title, address.title) &&
                 Objects.equals(addressLine1, address.addressLine1) &&
                 Objects.equals(addressLine2, address.addressLine2) &&
@@ -105,13 +97,12 @@ public class Address {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, user, title, addressLine1, addressLine2, city, country, postalCode, phoneNumber, createdAt, updatedAt);
+        return Objects.hash(id, title, addressLine1, addressLine2, city, country, postalCode, phoneNumber, createdAt, updatedAt);
     }
 
     // Builder class for Address
     public static class Builder {
         private Long id;
-        private User user;
         private String title;
         private String addressLine1;
         private String addressLine2;
@@ -125,10 +116,6 @@ public class Address {
             return this;
         }
 
-        public Builder setUser(User user) {
-            this.user = user;
-            return this;
-        }
 
         public Builder setTitle(String title) {
             this.title = title;
@@ -167,7 +154,6 @@ public class Address {
 
         public Builder copy(Address address) {
             this.id = address.getId();
-            this.user = address.getUser();
             this.title = address.getTitle();
             this.addressLine1 = address.getAddressLine1();
             this.addressLine2 = address.getAddressLine2();

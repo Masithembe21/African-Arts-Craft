@@ -30,7 +30,7 @@ public class AddressController {
         this.addressService = addressService;
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Address> create(@RequestBody Address address) {
         Address newAddress = addressService.create(address);
         return new ResponseEntity<>(newAddress, HttpStatus.CREATED);

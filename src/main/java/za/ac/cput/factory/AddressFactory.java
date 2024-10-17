@@ -20,7 +20,6 @@ public class AddressFactory {
      * Creates a {@link Address} instance from a {@link Address}.
      *
      * @param id           the ID of the address
-     * @param user         the user associated with the address
      * @param title        the title of the address
      * @param addressLine1 the first line of the address
      * @param addressLine2 the second line of the address
@@ -30,13 +29,12 @@ public class AddressFactory {
      * @param phoneNumber  the phone number associated with the address
      * @return a new {@link Address} object with properties set from the input parameters
      */
-    public static Address createAddress(Long id, User user, String title,
+    public static Address createAddress(Long id, String title,
                                         String addressLine1, String addressLine2,
                                         String city, String country,
                                         String postalCode, String phoneNumber) {
         // Check if any of the required parameters are null
-        if (Helper.isNullOrEmpty(user) ||
-                Helper.isNullOrEmpty(title) ||
+        if (Helper.isNullOrEmpty(title) ||
                 Helper.isNullOrEmpty(addressLine1) ||
                 Helper.isNullOrEmpty(addressLine2) ||
                 Helper.isNullOrEmpty(country) ||
@@ -50,7 +48,6 @@ public class AddressFactory {
         return new Address.Builder()
                 .setId(id) // Set the ID of the address
                 .setTitle(title)
-                .setUser(user)
                 .setAddressLine1(addressLine1)
                 .setAddressLine2(addressLine2)
                 .setCity(city)

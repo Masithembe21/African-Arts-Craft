@@ -10,53 +10,28 @@
   <component name="ChangeListManager">
     <list default="true" id="2dfc9b97-bcf6-48f1-9f27-38897c268d23" name="Changes" comment="Add getter methods and fix domain classes&#10;&#10;- Added getter methods to `Payments`, `Addresses`, and `Products` classes.&#10;- Ensured proper JPA annotations for the `Addresses` and `Products` classes.&#10;- Updated `AddressController` to include additional endpoints for querying addresses.">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_08_07_22_17__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_08_07_22_17__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_addresses.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_addresses.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_cart.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_cart.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_categories.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_categories.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_order_items.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_order_items.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_orders.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_orders.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_products.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_products.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_review.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_review.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_reviews.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_reviews.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_users.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_wishlist.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_wishlist.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/African_artsDB/african_arts_store_wishlist_items.sql" beforeDir="false" afterPath="$PROJECT_DIR$/African_artsDB/african_arts_store_wishlist_items.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CartItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CartItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/WishlistItemController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Wishlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Wishlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/WishlistItem.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/AddressFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/AddressFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/CartFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/CartFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/OrderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/OrderFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/WishlistFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/WishlistFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/WishlistItemFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/WishlistItemRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/WishlistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/WishlistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/AddressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/CartItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/CartItemFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/Userfactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/Userfactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/AddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/AddressRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/IWishlistItems.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/WishlistItemService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/WishlistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/WishlistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/ICart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/ICart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/AddressFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/AddressFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/CartFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/CartFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/WishlistFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/WishlistFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/WishlistItemFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/WishlistItemServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/WishlistServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/WishlistServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,14 +90,17 @@
       </list>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Twist1154/African-Arts-Craft.git&quot;,
-    &quot;accountId&quot;: &quot;2fe106e0-c6f1-493f-af56-58438595ca34&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Masithembe21/African-Arts-Craft.git",
+    "accountId": "c9168b1f-addc-48a1-8973-d8b87232ea4f"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;f10a0aff&quot;,
@@ -136,109 +114,109 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "HTTP Request.African_Art_Craft-endpoints | #1.executor": "Run",
-    "HTTP Request.African_Art_Craft-endpoints_1 | #1.executor": "Run",
-    "HTTP Request.generated-requests | #10.executor": "Run",
-    "HTTP Request.generated-requests | #11.executor": "Run",
-    "HTTP Request.generated-requests | #12.executor": "Run",
-    "HTTP Request.generated-requests | #13.executor": "Run",
-    "HTTP Request.generated-requests | #14.executor": "Run",
-    "HTTP Request.generated-requests | #15.executor": "Run",
-    "HTTP Request.generated-requests | #16.executor": "Run",
-    "HTTP Request.generated-requests | #17.executor": "Run",
-    "HTTP Request.generated-requests | #18.executor": "Run",
-    "HTTP Request.generated-requests | #19.executor": "Run",
-    "HTTP Request.generated-requests | #20.executor": "Run",
-    "HTTP Request.generated-requests | #21.executor": "Run",
-    "HTTP Request.generated-requests | #22.executor": "Run",
-    "HTTP Request.generated-requests | #23.executor": "Run",
-    "HTTP Request.generated-requests | #24.executor": "Run",
-    "HTTP Request.generated-requests | #25.executor": "Run",
-    "HTTP Request.generated-requests | #26.executor": "Run",
-    "HTTP Request.generated-requests | #27.executor": "Run",
-    "HTTP Request.generated-requests | #28.executor": "Run",
-    "HTTP Request.generated-requests | #3.executor": "Run",
-    "HTTP Request.generated-requests | #4.executor": "Run",
-    "HTTP Request.generated-requests | #5.executor": "Run",
-    "HTTP Request.generated-requests | #6.executor": "Run",
-    "HTTP Request.generated-requests | #7.executor": "Run",
-    "HTTP Request.generated-requests | #8.executor": "Run",
-    "HTTP Request.generated-requests | #9.executor": "Run",
-    "JPA.DatabaseSchemaImportDialog": "08eea60c-0627-44b9-a91a-f88478b5843c",
-    "JUnit.AddressServiceTest.create.executor": "Run",
-    "JUnit.AddressServiceTest.executor": "Run",
-    "JUnit.AddressServiceTest.findAll.executor": "Run",
-    "JUnit.CategoriesServiceTest.create.executor": "Run",
-    "JUnit.CategoriesServiceTest.executor": "Run",
-    "JUnit.OrderItemsServiceTest.executor": "Run",
-    "JUnit.OrderItemsServiceTest.testCreate.executor": "Run",
-    "JUnit.OrderServiceTest.executor": "Run",
-    "JUnit.PaymentFactoryTest.executor": "Run",
-    "JUnit.PaymentFactoryTest.testBuildPayment.executor": "Run",
-    "JUnit.PaymentServiceTest.executor": "Run",
-    "JUnit.ProductControllerTest.executor": "Run",
-    "JUnit.ProductControllerTest.getProductsUpdatedBefore.executor": "Run",
-    "JUnit.ProductServiceTest.create.executor": "Run",
-    "JUnit.ProductServiceTest.executor": "Run",
-    "JUnit.ReviewServiceTest.create.executor": "Run",
-    "JUnit.ReviewServiceTest.executor": "Run",
-    "JUnit.UserControllerTest.executor": "Run",
-    "JUnit.UserControllerTest.testCreateUser.executor": "Run",
-    "JUnit.UserServiceTest.executor": "Run",
-    "JUnit.UserServiceTest.testUpdate.executor": "Run",
-    "JUnit.UserfactoryTest.buildUser_Success.executor": "Run",
-    "JUnit.UserfactoryTest.executor": "Run",
-    "JUnit.UsersControllerTest.executor": "Run",
-    "JUnit.UsersControllerTest.testGetAllUsers.executor": "Debug",
-    "JUnit.WishlistFactoryTest and 1 more.executor": "Run",
-    "JUnit.WishlistFactoryTest.executor": "Run",
-    "JUnit.WishlistFactoryTest.testCreateWishlist.executor": "Run",
-    "JUnit.WishlistItemServiceTest and 1 more.executor": "Run",
-    "JUnit.WishlistItemServiceTest.executor": "Run",
-    "JUnit.WishlistServiceTest.executor": "Run",
-    "JUnit.WishlistServiceTest.testCreateWishlist.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Application.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "database.data.extractors.current.export.id": "SQL Inserts",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/retha/Documents/JetBrains Academy/springJwt",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;HTTP Request.African_Art_Craft-endpoints | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.African_Art_Craft-endpoints_1 | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #10.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #11.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #12.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #13.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #14.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #15.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #16.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #17.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #18.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #19.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #20.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #21.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #22.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #23.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #24.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #25.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #26.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #27.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #28.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #3.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #4.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #5.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #6.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #7.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #8.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.generated-requests | #9.executor&quot;: &quot;Run&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;08eea60c-0627-44b9-a91a-f88478b5843c&quot;,
+    &quot;JUnit.AddressServiceTest.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AddressServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AddressServiceTest.findAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoriesServiceTest.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CategoriesServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderItemsServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderItemsServiceTest.testCreate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentFactoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentFactoryTest.testBuildPayment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PaymentServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTest.getProductsUpdatedBefore.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTest.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReviewServiceTest.create.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ReviewServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.testCreateUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.testUpdate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserfactoryTest.buildUser_Success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserfactoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsersControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UsersControllerTest.testGetAllUsers.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.WishlistFactoryTest and 1 more.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WishlistFactoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WishlistFactoryTest.testCreateWishlist.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WishlistItemServiceTest and 1 more.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WishlistItemServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WishlistServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WishlistServiceTest.testCreateWishlist.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/retha/Documents/JetBrains Academy/springJwt&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "exasol",
-      "azure"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;exasol&quot;,
+      &quot;azure&quot;
     ],
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Capaciti\IdeaProjects\African-Arts-Craft\src\main\java\za\ac\cput\config" />
@@ -338,8 +316,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -402,6 +380,7 @@
       <workItem from="1728924857697" duration="1178000" />
       <workItem from="1728934347919" duration="2295000" />
       <workItem from="1729014444404" duration="13089000" />
+      <workItem from="1729184835975" duration="8768000" />
     </task>
     <task id="LOCAL-00004" summary="Structure">
       <option name="closed" value="true" />

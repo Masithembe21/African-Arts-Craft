@@ -16,21 +16,10 @@ import java.util.List;
 @Service
 public interface IUserService extends IService<User, Long> {
 
-    void delete(Long id);
+    User createUser(User user);
 
-    List<User> findByUsername(String username);
+    User updateUser(User user);
 
-    List<User> findByLastName(String last_name);
+    List<User> getAllUsers();
 
-    List<User> findByEmail(String email);
-
-    /**
-     * Finds a list of users by their avatar image URL or path.
-     *
-     * @param avatar the avatar image URL or path to search for
-     * @return a list of users that match the given avatar
-     */
-    List<User> findByAvatar(String avatar);
-
-    List<User> findByRoles(String role);
 }
